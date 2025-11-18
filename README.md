@@ -2,6 +2,8 @@
 Clip TIF file bands from a single Landsat scene
 
 # Options:
+
+```
   -i, --idir DIR         Input directory to scan *.tif files
   -o, --odir DIR         Output directory to write *.tif files
   -c, --source_crs STR   Source coordinate reference system (e.g. "EPSG:32615")
@@ -11,6 +13,7 @@ Clip TIF file bands from a single Landsat scene
   -n, --label STR        Label for output files
   -v, --version          Show version information
   -h, --help             Show this help message
+```
 
 # Preprocessing
 
@@ -19,6 +22,10 @@ Clip TIF file bands from a single Landsat scene
 3) Uses a shapefile polygon, with a single feature, to extract its extent. Inflates by 31 m.
 4) Uses the extent to extract exactly the same region on the scene of each date.
 5) Saves a clipped *.tif file for each dataset.
+
+# Example
+
+See bash script `run_clip.sh` for aworking example.
 
 # License
 
